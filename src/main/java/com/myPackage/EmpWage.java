@@ -34,13 +34,15 @@ public class EmpWage {
                 int choice= (int) Math.floor(Math.random() * 10) % 3;
                 //method call
                 empHr = getWorkingHours(choice);
+
                 // calculate total emp hours
                 totalEmpHr = (totalEmpHr + empHr);
+
                 // calculate daily emp hour for month
                 int array[]=new int [25];
                 totalWorkingDays++;
                 array[totalWorkingDays]=dailyWage(empHr);
-                System.out.println("array[totalWorkingDays]");
+                System.out.println(totalWorkingDays+""+array[totalWorkingDays]);
 
                 // monthly wage
                 totalMonthlywage=(totalMonthlywage+array[totalWorkingDays]);
